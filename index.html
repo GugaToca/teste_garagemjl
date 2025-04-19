@@ -68,7 +68,7 @@ nav .menu li a:hover {
     display: none;
     background: none;
     border: none;
-    font-size: 36px;
+    font-size: 24px;
     color: white;
     position: absolute;
     top: 10px;
@@ -113,7 +113,7 @@ d
     display: none;
     background: none;
     border: none;
-    font-size: 36px;
+    font-size: 24px;
     color: white;
     position: absolute;
     top: 10px;
@@ -682,7 +682,7 @@ button:hover {
     display: none;
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 36px;
     color: rgb(224, 222, 222);
     position: absolute;
     top: -80px;
@@ -706,33 +706,38 @@ nav .menu {
 
     nav .menu {
         flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
+        position: fixed; /* Usar fixed para garantir que o menu fique na frente de tudo */
+        top: 0; /* Posicionado no topo da tela */
+        left: 0; /* Posicionado no início da tela */
         background-color: #02c1e2;
-        width: 200px;
+        width: 5vw; /* Ocupa toda a largura da janela */
+        height: 40vh; /* Ocupa toda a altura da janela */
         display: none; /* Esconde o menu por padrão */
+        z-index: 999; /* Garante que o menu esteja acima de outros elementos */
+        align-items: center; /* Centraliza verticalmente os itens */
+        justify-content: center; /* Centraliza horizontalmente os itens */
     }
 
     nav .menu.active {
     display: flex; /* Garante que o menu seja exibido */
     flex-direction: column;
     position: absolute;
-    top: 50px; /* Ajuste para alinhar o menu abaixo do botão */
-    right: 10px;
+    top: 10px; /* Ajuste para alinhar o menu abaixo do botão */
+    right: 20px;
     background-color: #02c1e2;
-    width: 200px;
+    width: 353px;
     z-index: 1000; /* Garante que o menu fique acima de outros elementos */
 }
 
 
     nav .menu li {
-        padding: 10px 20px;
+        padding: 3px 5px;
     }
 
     nav .menu li a {
-        color: rgb(224, 222, 222);
-        font-size: 18px;
+        color: white;
+        font-size: 24px; /* Aumentado para melhor legibilidade */
+        text-align: center;
     }
 }
 
@@ -773,7 +778,7 @@ nav .menu {
                 <li><a href="#nossos-servicos">Serviços</a></li>
                 <li><a href="#galeria">Galeria</a></li>
                 <li><a href="#cartão-fidelidade">Cartão Fidelidade</a></li>
-                <li><a href="#contatos">Contato</a></li>
+                <li><a href="#local">Nosso Local</a></li>
             </ul>
         </nav>
         
@@ -915,7 +920,7 @@ nav .menu {
                         </div>
 
 
-                        <div class="contato" id="contato">
+                        <div class="nosso-local" id="nosso-local">
                             <h2>Entre em contato:</h2>
                             <div class="redes-sociais">
                               <a href="https://www.instagram.com/garagem_jl" target="_blank" class="social instagram">
@@ -934,7 +939,7 @@ nav .menu {
     </div>
     
     <footer>
-        <p>&copy; 2025 Garagem JL. Todos os direitos reservados.</p>
+        <p>&copy; 2025| Garagem JL. Todos os direitos reservados.</p>
         Desenvolvido por 
         <a href="https://www.instagram.com/studio.linhas" target="_blank" style="text-decoration: none; color: #b61307;">
     Studio Linhas
