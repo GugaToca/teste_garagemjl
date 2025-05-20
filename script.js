@@ -9,10 +9,20 @@ function moveSlide(step) {
 
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
+const menuLinks = document.querySelectorAll('.menu li a'); // Seleciona todos os links do menu
 
+// Alterna a visibilidade do menu ao clicar no botão hambúrguer
 menuToggle.addEventListener('click', () => {
     menu.classList.toggle('active'); // Adiciona ou remove a classe "active"
 });
+
+// Fecha o menu ao clicar em um link
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active'); // Remove a classe "active"
+    });
+});
+
 
 let testimonialIndex = 0;
 const testimonials = document.querySelectorAll('.testimonial');
